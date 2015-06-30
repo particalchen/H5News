@@ -49,7 +49,7 @@ body{
 
 .plate-name{
     color:gray;
-    size:14px;
+    font-size:14px;
 }
 .plate-btn{
     display:block;
@@ -77,12 +77,13 @@ body{
 }
 .nav-bar>p{
     text-align:center;
-    padding-top:12px;
-    padding-bottom:12px;
+    padding-top:24px;
+    padding-bottom:24px;
     margin-left:auto;
     margin-right:auto;
-    size:20px;
+    font-size: 20px;
 }
+
 .plate-title-display{
     display:none;
 }
@@ -109,17 +110,27 @@ body{
     .w-nav-btn{
         display:none;
     }
+    .nav-group{
+        width:100%;
+        height: 100%;
+    }
+
     .plate-title-display{
         display:none;
     }
     .content-wrap{
-        width:990px;
+        width:991px;
     }
 }
 @media (min-width: 767px) and (max-width: 990px){
     .w-nav-btn{
         display:none;
     }
+    .nav-group{
+        width:100%;
+        height: 100%;
+    }
+
     .plate-title-display{
         display:none;
     }
@@ -131,6 +142,15 @@ body{
     .w-nav-btn{
         display:block;
     }
+    .nav-group{
+        position: absolute;
+        margin-top: 68px;
+        padding: 0 12px;
+        width:204px;
+        height: 100%;
+        background-color:purple;
+    }
+
     .plate-title-display{
         display:block;
     }
@@ -139,16 +159,28 @@ body{
     }
     .menu-btn{
         position:absolute;
-        padding:12px;
+        padding:24px;
         margin-left:0;
         margin-top:0;
         float:left;
+    }
+    .content-display{
+        display: none;
     }
 }
 @media (min-width: 0px) and (max-width: 464px){
     .w-nav-btn{
         display:block;
     }
+    .nav-group{
+        position: absolute;
+        margin-top: 68px;
+        padding: 0 12px;
+        width:204px;
+        height: 100%;
+        background-color:purple;
+    }
+
     .plate-title-display{
         display:block;
     }
@@ -157,9 +189,12 @@ body{
     }
     .menu-btn{
         position:absolute;
-        padding:12px;
+        padding:24px;
         margin-left:0;
         margin-top:0;
         float:left;
+    }
+    .content-display{
+        display: none;
     }
 }
