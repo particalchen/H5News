@@ -3,7 +3,7 @@ html,body,p{
     padding:0;
 }
 body{
-    background-color:gray;
+    background-color:whitesmoke;
     /*position:relative;*/
     width:100%;
     height:100%;
@@ -16,8 +16,10 @@ body{
     /*padding:24px;*/
     margin-left:auto;
     margin-right:auto;
-    background-color:purple;
-    color:white;
+    /*background-color: #5940aa;*/
+    /*background-color: #fd453e;*/
+    background-color: #31b4e7;
+    color:whitesmoke;
     display:block;
     float:left;
     width:100%;
@@ -46,9 +48,19 @@ body{
 .h-logo{
     height:48px;
 }
-
+.divide-line{
+    float: left;
+    height: 1px;
+    width: 100%;
+    margin: 8px auto;
+    background-color: whitesmoke;
+    opacity: .5;
+}
+.divide-line-display{
+    display: none;
+}
 .plate-name{
-    color:gray;
+    color: whitesmoke;
     font-size:14px;
 }
 .plate-btn{
@@ -68,7 +80,7 @@ body{
     display:block;
     text-align:center;
     margin:8px auto;
-    margin-bottom:0px;
+    margin-bottom:0;
 }
 .nav i{
     float:left;
@@ -83,9 +95,15 @@ body{
     margin-right:auto;
     font-size: 20px;
 }
-
 .plate-title-display{
     display:none;
+}
+
+.menu-btn:hover{
+    background-color: #0096d0;
+}
+.menu-btn:active{
+    background-color: transparent;
 }
     
 .icon-menu{
@@ -114,12 +132,17 @@ body{
         width:100%;
         height: 100%;
     }
-
+    .nav-group-display{
+        display: block ;
+    }
     .plate-title-display{
         display:none;
     }
     .content-wrap{
         width:991px;
+    }
+    .divide-line-display{
+        display: none;
     }
 }
 @media (min-width: 767px) and (max-width: 990px){
@@ -130,12 +153,17 @@ body{
         width:100%;
         height: 100%;
     }
-
+    .nav-group-display{
+        display: block ;
+    }
     .plate-title-display{
         display:none;
     }
     .content-wrap{
         width:100%;
+    }
+    .divide-line-display{
+        display: none;
     }
 }
 @media (min-width: 465px) and (max-width: 766px){
@@ -148,9 +176,12 @@ body{
         padding: 0 12px;
         width:204px;
         height: 100%;
-        background-color:purple;
+        background-color:#31b4e7;
+        border-top: 1px whitesmoke solid;
     }
-
+    .nav-group-display{
+        display: none ;
+    }
     .plate-title-display{
         display:block;
     }
@@ -166,6 +197,13 @@ body{
     }
     .content-display{
         display: none;
+    }
+    .divide-line-display{
+        display: block;
+    }
+    .w-nav-btn-middle{
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 @media (min-width: 0px) and (max-width: 464px){
@@ -178,7 +216,11 @@ body{
         padding: 0 12px;
         width:204px;
         height: 100%;
-        background-color:purple;
+        background-color:#31b4e7;
+        border-top: 1px whitesmoke solid;
+    }
+    .nav-group-display{
+        display: none;
     }
 
     .plate-title-display{
@@ -196,5 +238,12 @@ body{
     }
     .content-display{
         display: none;
+    }
+    .divide-line-display{
+        display: block;
+    }
+    .w-nav-btn-middle{
+        margin-left: auto;
+        margin-right: auto;
     }
 }

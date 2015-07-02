@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
         <link rel="stylesheet" href="css/whole.css" type="text/css" />
+        <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script type="text/javascript" src="js/dashboard.js"></script>
     </head>
     <body>
         <div class="content-wrap">
             <div class="nav">
                 <div class="nav-bar">
-                    <div class="w-nav-btn menu-btn">
+                    <div class="w-nav-btn menu-btn" onclick="toggleSlideMenu()">
                         <i class="icon-menu"></i>
                     </div>
                     <p class="plate-title-display">Dashboard</p>
                 </div>
                 <!--导航菜单组-->
-                <div class="nav-group">
+                <div class="nav-group nav-group-display" id="slideMenu">
                     <div class="w-logo content-display">
                         <div class="logo h-logo"></div>
                     </div>
@@ -43,13 +46,27 @@
                         <div class="icon-plate"></div>
                         <p class="plate-name">3</p>
                     </div>
-                    <!--登录菜单，居右-->
-                    <div class="plate-btn w-nav-btn-right">
+                    <div class="divide-line divide-line-display">
+                    </div>
+                    <!--登录菜单，web时居右，mobile时居中-->
+                    <div class="plate-btn w-nav-btn-right w-nav-btn-middle">
                         <div class="icon-plate"></div>
-                        <p class="plate-name">...</p>
+                        <p class="plate-name">登录</p>
                     </div>
                 </div>
                 <!--导航菜单组结束-->
+            </div>
+            <div class="sub-content-wrap">
+                <div class="sub-content-head">
+                    <div class="sub-content-name"></div>
+                    <div class="sub-content-displaymode"></div>
+                </div>
+                <div class="sub-content">
+                    <div class="news-wrap">
+
+                    </div>
+                </div>
+
             </div>
         </div>
         
