@@ -1,0 +1,81 @@
+/*=================================*/
+
+/*缩略图cover动画效果------开始*/
+
+/*=================================*/
+
+/*背景图模糊+透明度动画*/
+.album-cover>div:nth-child(2) {
+    transition: .2s filter ease-out;
+    -webkit-transition: .2s -webkit-filter ease-out;
+    -moz-transition: .2s -moz-filter ease-out;
+    -ms-transition: .2s -ms-filter ease-out;
+    -o-transition: .2s -o-filter ease-out;
+}
+/*阴影动画*/
+.album-cover{
+    -webkit-transition: box-shadow .2s ease-out,border-color .2s ease-out;
+    -moz-transition: box-shadow .2s ease-out,border-color .2s ease-out;
+    transition: box-shadow .2s ease-out,border-color .2s ease-out;
+}
+/*文字及底板上浮动画*/
+.title-wrap{
+    -webkit-transition: opacity 0.35s 0.1s,margin-top 0.35s  0.1s;
+    -moz-transition: opacity 0.35s  0.1s,margin-top 0.35s  0.1s;
+    transition: opacity 0.35s  0.1s,margin-top 0.35s  0.1s;
+}
+/*小icon动画*/
+.caption-btn-group>div:nth-child(1){
+    -webkit-transition: opacity .2s 0.1s,margin-top .2s  0.1s;
+    -moz-transition: opacity .2s  0.1s,margin-top .2s  0.1s;
+    transition: opacity .2s  0.1s,margin-top .2s  0.1s;
+}
+.caption-btn-group>div:nth-child(2){
+    -webkit-transition: opacity .2s 0.15s,margin-top .2s 0.15s;
+    -moz-transition: opacity .2s  0.15s,margin-top .2s 0.15s;
+    transition: opacity .2s  0.15s,margin-top .2s 0.15s;
+}
+.caption-btn-group>div:nth-child(3){
+    -webkit-transition: opacity .2s 0.2s,margin-top .2s 0.2s;
+    -moz-transition: opacity .2s  0.2s,margin-top .2s 0.2s;
+    transition: opacity .2s  0.2s,margin-top .2s 0.2s;
+}
+/*背景图目标值*/
+.album-cover:hover>div:nth-child(2) {
+    /*滤镜：模糊+透明度*/
+    -webkit-filter: blur(2px) opacity(.8) grayscale(1); /* Chrome, Opera */
+    -moz-filter: blur(2px) opacity(.8) grayscale(1);
+    /*-ms-filter: blur(2px) opacity(.3);*/
+    filter: blur(2px) opacity(.8) grayscale(1);
+}
+/*阴影目标值*/
+.album-cover:hover {
+    border-color: white;
+    -moz-box-shadow: 5px 5px 5px #A8A8A8;
+    -webkit-box-shadow: 5px 5px 5px #A8A8A8;
+    box-shadow: 5px 5px 5px #A8A8A8;
+}
+/*文字及底板目标值*/
+.album-cover:hover .caption-wrap>div:nth-child(2) {
+    opacity: .9;
+    margin-top: 135px;
+}
+/*小icon目标值*/
+.album-cover:hover .caption-wrap>div:nth-child(1)>div:nth-child(1) {
+    opacity: 1;
+    margin-top: 0;
+}
+.album-cover:hover .caption-wrap>div:nth-child(1)>div:nth-child(2) {
+    opacity: 1;
+    margin-top: 0;
+}
+.album-cover:hover .caption-wrap>div:nth-child(1)>div:nth-child(3) {
+    opacity: 1;
+    margin-top: 0;
+}
+/*=================================*/
+
+/*缩略图cover动画效果------结束*/
+
+/*=================================*/
+

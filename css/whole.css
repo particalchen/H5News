@@ -1,16 +1,19 @@
-html,body,p{
+html,body,p,ul,li{
     margin:0;
     padding:0;
+    font-family: "微软雅黑", sans-serif;
 }
-body{
-    background-color:whitesmoke;
+html,body{
+    background-color:white;
     /*position:relative;*/
     width:100%;
     height:100%;
 }
 .content-wrap{
+    min-height: 100%;
+    height: auto !important;
     width:991px;
-    margin: 0 auto;
+    margin: 0 auto -24px auto;
 }
 .nav{
     /*padding:24px;*/
@@ -61,7 +64,7 @@ body{
 }
 .plate-name{
     color: whitesmoke;
-    font-size:14px;
+    font-size:12px;
 }
 .plate-btn{
     display:block;
@@ -71,8 +74,8 @@ body{
 }
 .plate-btn>div{
     /*float:left;*/
-    width:44px;
-    height:44px;
+    width:40px;
+    height:40px;
     margin-left:auto;
     margin-right:auto;
 }
@@ -105,7 +108,126 @@ body{
 .menu-btn:active{
     background-color: transparent;
 }
-    
+.sub-content-wrap{
+    display: block;
+    float: left;
+    width: 100%;
+    height: 100%;
+    background-color: whitesmoke;
+}
+.sub-content-head{
+    display: block;
+    float: left;
+    border-bottom: 2px white solid;
+    width: 100%;
+    background-color: whitesmoke;
+}
+.sub-content-name{
+    display: block;
+    float: left;
+    /*padding: 0 12px;*/
+    /*background-color: slateblue;*/
+}
+.sub-content-name>p{
+    display:inline-block;
+    text-align:center;
+    position: relative;
+    line-height: 46px;
+}
+.sub-content-displaymode{
+    display: block;
+    float: right;
+    padding: 0 12px;
+    padding-right: 0;
+}
+.sub-content{
+    overflow: hidden;
+    display: block;
+    float: left;
+    height: 100%;
+    width: 100%;
+    background-color:whitesmoke;
+    border-top: 1px darkgrey solid;
+}
+.sub-content li{
+    display: block;
+    float: left;
+    width: 25%
+}
+.album-size{
+    width: 220px;
+    height: 165px;
+}
+.album-cover{
+    display: block;
+    /*float: left;*/
+    margin: 12px auto;
+    /*padding: 12px;*/
+    background-color: grey;
+    border: 5px lightgrey solid;
+}
+.caption-wrap{
+    position: absolute;
+    display: block;
+    overflow: hidden;
+    /*margin: 12px auto;*/
+    /*padding: 5px;*/
+    z-index: 100;
+    width: 220px;
+    height: 165px;
+
+}
+.caption-btn-group{
+    width: 100%;
+}
+.caption-btn{
+    margin-top: -30px;
+    opacity: 0;
+}
+.caption-btn-icon-padding{
+    padding: 8px;
+}
+.caption-wrap>.title-wrap{
+    position: relative;
+    display: block;
+    height: 30px;
+    width: 100%;
+    margin-top: 165px;
+    /*background-color: #0096d0;*/
+    /* IE9、标准浏览器、IE6和部分IE7内核的浏览器(如QQ浏览器)会读懂 */
+    background-color:rgba(0,150,208,0.5);
+    opacity: .8;
+}
+.title-wrap p{
+    display: block;
+    font-size: 12px;
+    color: white;
+    text-align: center;
+    line-height: 30px;
+    padding:0 8px;
+
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    -o-text-overflow:ellipsis;
+    overflow:hidden;
+    opacity: 1;
+}
+.footer {
+    position: relative;
+    margin-top: -24px; /* negative value of footer height */
+    height: 24px;
+    clear:both;
+}
+.small-icon{
+    width:20px !important;
+    height:20px !important;
+}
+.upon-btn-right{
+    padding-right: 0;
+}
+.upon-btn-left{
+    padding-left: 0;
+}
 .icon-menu{
     background-image: url('../assets/ic_menu_72px@3x.png');
     background-repeat: no-repeat;
@@ -124,6 +246,38 @@ body{
     background-size:contain;
     background-position:center;
 }
+.cover-img1{
+    position: absolute;
+    background-image: url('../assets/img1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+.cover-img2{
+    background-image: url('../assets/img2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.cover-img3{
+    background-image: url('../assets/img3.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.cover-img4{
+    background-image: url('../assets/img4.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.cover-img5{
+    background-image: url('../assets/img5.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
 @media (max-width:991px) {
     .w-nav-btn{
         display:none;
@@ -139,34 +293,34 @@ body{
         display:none;
     }
     .content-wrap{
+        float: left;
         width:991px;
     }
     .divide-line-display{
         display: none;
     }
+    .sub-content li{
+        display: block;
+        float: left;
+        width: 25%
+    }
 }
 @media (min-width: 767px) and (max-width: 990px){
-    .w-nav-btn{
-        display:none;
-    }
-    .nav-group{
-        width:100%;
-        height: 100%;
-    }
-    .nav-group-display{
-        display: block ;
-    }
-    .plate-title-display{
-        display:none;
-    }
+
     .content-wrap{
+        float: left;
         width:100%;
     }
-    .divide-line-display{
+    .sub-content li{
+        display: block;
+        float: left;
+        width: 33.33%
+    }
+    .footer-disable{
         display: none;
     }
 }
-@media (min-width: 465px) and (max-width: 766px){
+@media (max-width: 766px){
     .w-nav-btn{
         display:block;
     }
@@ -178,6 +332,7 @@ body{
         height: 100%;
         background-color:#31b4e7;
         border-top: 1px whitesmoke solid;
+        z-index: 200;
     }
     .nav-group-display{
         display: none ;
@@ -186,7 +341,13 @@ body{
         display:block;
     }
     .content-wrap{
+        float: left;
         width:100%;
+    }
+    .sub-content li{
+        display: block;
+        float: left;
+        width: 50%
     }
     .menu-btn{
         position:absolute;
@@ -204,46 +365,26 @@ body{
     .w-nav-btn-middle{
         margin-left: auto;
         margin-right: auto;
+    }
+    .display-disable{
+        display: none;
+    }
+    .footer-disable{
+        display: none;
     }
 }
-@media (min-width: 0px) and (max-width: 464px){
-    .w-nav-btn{
-        display:block;
-    }
-    .nav-group{
-        position: absolute;
-        margin-top: 68px;
-        padding: 0 12px;
-        width:204px;
-        height: 100%;
+/*针对div半透明，子文字元素不透明的低版本解决样式*/
+@media \0screen\,screen\9 {
+    /* 只支持IE6、7、8 */
+    .caption-wrap{
         background-color:#31b4e7;
-        border-top: 1px whitesmoke solid;
+        filter:Alpha(opacity=50);
+        /* IE6、7、8只能设置position:static(默认属性) ，否则会导致子元素继承Alpha值 */
+        position: static;
+        *zoom:1; /* 激活IE6、7的haslayout属性，让它读懂Alpha */
     }
-    .nav-group-display{
-        display: none;
-    }
-
-    .plate-title-display{
-        display:block;
-    }
-    .content-wrap{
-        width:100%;
-    }
-    .menu-btn{
-        position:absolute;
-        padding:24px;
-        margin-left:0;
-        margin-top:0;
-        float:left;
-    }
-    .content-display{
-        display: none;
-    }
-    .divide-line-display{
-        display: block;
-    }
-    .w-nav-btn-middle{
-        margin-left: auto;
-        margin-right: auto;
+    .caption-wrap p{
+        /* 设置子元素为相对定位，可让子元素不继承Alpha值 */
+        position: relative;
     }
 }
